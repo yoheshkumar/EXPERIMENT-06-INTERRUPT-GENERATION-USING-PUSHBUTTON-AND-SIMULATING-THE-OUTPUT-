@@ -95,8 +95,25 @@ Developed by : YOHESH KUMAR R.M
 Reg No : 212222240118
 Dept : AIML
 
-```
-```
+
+#include "main.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+  
+  HAL_Init();
+
+  SystemClock_Config();
+  MX_GPIO_Init();
+ 
+  while (1)
+  {
+    
+  }
+ 
+}
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
@@ -105,6 +122,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_11);
 	}
 }
+
 
 ```
 
